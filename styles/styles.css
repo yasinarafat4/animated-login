@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
+  background-color: #191945;
+}
+
+.box {
+  position: relative;
+  overflow: hidden;
+  color: white;
+  border-radius: 10px;
+  width: 500px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000313;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  margin-top: 100px;
+}
+
+.text {
+  /* background-color: red; */
+  width: 80%;
+  height: 80%;
+  text-align: center;
+  z-index: 100;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+input::placeholder {
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.text input {
+  font-size: 1.5rem;
+  color: white;
+  width: 65%;
+  margin-bottom: 20px;
+  background-color: transparent;
+  padding: 10px;
+  outline: none;
+  border: none;
+  border-bottom: #11c0c0 solid 2px;
+}
+
+.box::before {
+  content: " ";
+  width: 170px;
+  height: 180%;
+  position: absolute;
+  background: linear-gradient(rgb(5, 119, 171), red);
+  animation-duration: 4s;
+  animation-delay: 2ms;
+  animation: border-annimation 3s linear infinite;
+}
+
+.box::after {
+  content: " ";
+  position: absolute;
+  background: #000313;
+  inset: 5px;
+  border-radius: 10px;
+}
+
+input:focus {
+  background-image: linear-gradient(to right, red, rgb(247, 247, 247), red);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+@keyframes border-annimation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.text p {
+  position: absolute;
+  bottom: -25px;
+  opacity: 0.17;
+}
+
+/* Animation for button */
+
+button {
+  color: white;
+  font-weight: 400;
+  font-size: 1.05rem;
+  margin-top: 20px;
+  cursor: pointer;
+  height: 3rem;
+  width: 7rem;
+  border: none;
+  border-radius: 10px;
+}
+button,
+.brand {
+  background-image: linear-gradient(200deg, blue, green, #fc3a8e, red);
+  background-size: 500%;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+  animation-name: scrollColor;
+  animation-duration: 2s;
+  font-family: "Ubuntu", sans-serif;
+  transition: 0.5s;
+}
+
+.brand {
+  animation-duration: 5s;
+  animation-name: scrollColortxt;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transform: none;
+}
+
+button:hover {
+  cursor: pointer;
+  text-shadow: #000313;
+  box-shadow: 7px 5px 10px white;
+  transform: scale(1.03);
+}
+
+@keyframes scrollColor {
+  0% {
+    background-position: 0;
+    transform: translateY(0);
+  }
+
+  50% {
+    background-position: 100%;
+    transform: translateY(-0.6rem);
+  }
+}
+@keyframes scrollColortxt {
+  0% {
+    background-position: 0;
+    transform: translateX(0);
+  }
+
+  50% {
+    background-position: 100%;
+    transform: translateX(-0.9rem);
+  }
+}
+
+/* Styles for the show/hide icons */
+
+.password-container {
+  position: relative;
+}
+
+.bx.bxs-show,
+.bx.bxs-hide {
+  cursor: pointer;
+  position: absolute;
+  right: 50px;
+  top: 140px;
+  font-size: 25px;
+}
+
+#hidePassword {
+  display: none;
+}
