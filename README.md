@@ -10,4 +10,4 @@ This project features a professionally designed Animated Login Page created usin
 
 ## Live Link
 
-- Hosted in Netlify -> [Animated Login]()
+- Hosted in Netlify -> [Animated Login](https://animated-login-2e62f5.netlify.app/)
