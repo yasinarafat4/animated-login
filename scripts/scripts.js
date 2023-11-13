@@ -3,9 +3,9 @@ ScrollReveal({
   reset: true,
   distance: "50px",
   duration: 2000,
-  delay: 200,
+  delay: 600,
 });
-ScrollReveal().reveal(".box", { origin: "bottom" });
+ScrollReveal().reveal(".box", { origin: "top" });
 ScrollReveal().reveal(".text", { origin: "left" });
 
 // Scripts for the show/hide icons
