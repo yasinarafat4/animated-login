@@ -142,7 +142,7 @@ button:hover {
   cursor: pointer;
   text-shadow: #000313;
   box-shadow: 7px 5px 10px white;
-  transform: scale(5);
+  transform: scale(0.99);
 }
 
 @keyframes scrollColor {
